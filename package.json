@@ -4,19 +4,8 @@
   "description": "android tests",
   "main": "wdio.conf.js",
   "scripts": {
-    "android": "node_modules/.bin/wdio wdio.conf.js",
-    "loginSuite": "node_modules/.bin/wdio wdio.conf.js --suite login",
-    "postFeedSuite": "node_modules/.bin/wdio wdio.conf.js --suite postFeed",
-    "test": "mocha --timeout 6000000 tests/login.test && mocha --timeout 6000000 tests/post-feed.test && mocha --timeout 6000000 tests/people.test && mocha --timeout 6000000 tests/chats.test && mocha --timeout 6000000 tests/happening.test && mocha --timeout 6000000 tests/jobs.test && mocha --timeout 6000000 tests/market-place.test && mocha --timeout 6000000 tests/settings.test",
-    "loginTest": "mocha --timeout 6000000 tests/login.test",
-    "postfeedTest": "mocha --timeout 6000000 tests/post-feed.test",
-    "peopleTest": "mocha --timeout 6000000 tests/people.test",
-    "chatsTest": "mocha --timeout 6000000 tests/chats.test",
-    "happeningTest": "mocha --timeout 6000000 tests/happening.test",
-    "jobsTest": "mocha --timeout 6000000 tests/jobs.test",
-    "marketplaceTest": "mocha --timeout 6000000 tests/market-place.test",
-    "settingstest": "mocha --timeout 6000000 tests/settings.test",
-    "successLogin": "mocha --timeout 6000000 test-suites/login-scripts/success-login.test"
+    "android": "node_modules/.bin/wdio wdio.conf.js --suite login,postFeed",
+    "loginSuite": "node_modules/.bin/wdio wdio.conf.js --suite login"
   },
   "dependencies": {
     "appium": "^1.6.3",
